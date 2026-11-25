@@ -1,0 +1,28 @@
+media:
+  input: public/images
+  output: /images
+content:
+  - name: posts
+    label: Journal posts
+    type: collection
+    path: posts
+    view:
+      fields: [title, date]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: description
+        label: "Short summary (shown on Google and in the list)"
+        type: text
+      - name: draft
+        label: "Draft (tick to keep it hidden from the site)"
+        type: boolean
+      - name: body
+        label: Post
+        type: rich-text
